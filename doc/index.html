@@ -36,7 +36,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="1200">
     
-    <link rel="preload" href="/assets/css/0.styles.4d05292e.css" as="style"><link rel="preload" href="/assets/js/app.db476e07.js" as="script"><link rel="preload" href="/assets/js/3.449ab6a0.js" as="script"><link rel="preload" href="/assets/js/4.bb17ff94.js" as="script"><link rel="preload" href="/assets/js/14.5271b959.js" as="script"><link rel="preload" href="/assets/js/7.92ba2aee.js" as="script"><link rel="preload" href="/assets/js/5.80c9f8fe.js" as="script"><link rel="prefetch" href="/assets/js/1.17608ba2.js"><link rel="prefetch" href="/assets/js/10.22a28974.js"><link rel="prefetch" href="/assets/js/11.49a829a6.js"><link rel="prefetch" href="/assets/js/12.5ef0ad3a.js"><link rel="prefetch" href="/assets/js/13.777fd41e.js"><link rel="prefetch" href="/assets/js/15.723b738f.js"><link rel="prefetch" href="/assets/js/6.754e2e9a.js"><link rel="prefetch" href="/assets/js/8.ddb6baea.js"><link rel="prefetch" href="/assets/js/9.8189d3ca.js">
+    <link rel="preload" href="/assets/css/0.styles.4d05292e.css" as="style"><link rel="preload" href="/assets/js/app.579e3a65.js" as="script"><link rel="preload" href="/assets/js/3.449ab6a0.js" as="script"><link rel="preload" href="/assets/js/4.bb17ff94.js" as="script"><link rel="preload" href="/assets/js/14.cc619e35.js" as="script"><link rel="preload" href="/assets/js/7.92ba2aee.js" as="script"><link rel="preload" href="/assets/js/5.80c9f8fe.js" as="script"><link rel="prefetch" href="/assets/js/1.17608ba2.js"><link rel="prefetch" href="/assets/js/10.22a28974.js"><link rel="prefetch" href="/assets/js/11.49a829a6.js"><link rel="prefetch" href="/assets/js/12.5ef0ad3a.js"><link rel="prefetch" href="/assets/js/13.3dcde6b7.js"><link rel="prefetch" href="/assets/js/15.39b5f2e8.js"><link rel="prefetch" href="/assets/js/6.754e2e9a.js"><link rel="prefetch" href="/assets/js/8.ddb6baea.js"><link rel="prefetch" href="/assets/js/9.8189d3ca.js">
     <link rel="stylesheet" href="/assets/css/0.styles.4d05292e.css">
   </head>
   <body>
@@ -325,7 +325,7 @@ copy = {...other}
 a = {1, 2, 3, x: 1}
 b = {4, 5, y: 1}
 merge = {...a, ...b}
-</pre></div></div> <h3 id="metatable"><a href="#metatable" class="header-anchor">#</a> Metatable</h3> <p>The <strong>#</strong> operator can be used as a shortcut for metatable manipulation.</p> <ul><li><strong>Metatable Creation</strong>
+</pre></div></div> <h3 id="metatable"><a href="#metatable" class="header-anchor">#</a> Metatable</h3> <p>The <strong>#</strong> operator can be used as a shortcut for metatable manipulation.</p> <ul><li><strong>Metatable Creation</strong><br>
 Create normal table with  key <strong>#</strong> or metamethod key that ends with <strong>#</strong>.</li></ul> <div class="language-moonscript extra-class"><pre class="language-moonscript"><code>mt <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 add <span class="token operator">=</span> <span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token operator">#</span><span class="token operator">:</span> mt<span class="token punctuation">,</span> <span class="token property">value</span><span class="token operator">:</span> <span class="token variable">@value</span> <span class="token operator">+</span> right<span class="token punctuation">.</span>value
 mt<span class="token punctuation">.</span>__add <span class="token operator">=</span> add
@@ -352,7 +352,7 @@ d = a + b + c
 print d.value
 
 close _ = close#: -&gt; print &quot;out of scope&quot;
-</pre></div></div> <ul><li><strong>Metatable Accessing</strong>
+</pre></div></div> <ul><li><strong>Metatable Accessing</strong><br>
 Accessing metatable with key <strong>#</strong> or metamethod key that ends with <strong>#</strong>.</li></ul> <div class="language-moonscript extra-class"><pre class="language-moonscript"><code><span class="token comment">-- create with metatable containing field &quot;value&quot;</span>
 tb <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;value&quot;</span><span class="token punctuation">]</span><span class="token operator">#</span><span class="token operator">:</span> <span class="token number">123</span>
 tb<span class="token punctuation">.</span>index<span class="token operator">#</span> <span class="token operator">=</span> tb<span class="token punctuation">.</span><span class="token operator">#</span>
@@ -366,7 +366,7 @@ tb.index# = tb.#
 print tb.value
 tb.# = __index: {item: &quot;hello&quot;}
 print tb.item
-</pre></div></div> <ul><li><strong>Metatable Destructure</strong>
+</pre></div></div> <ul><li><strong>Metatable Destructure</strong><br>
 Destruct metatable with metamethod key that ends with <strong>#</strong>.</li></ul> <div class="language-moonscript extra-class"><pre class="language-moonscript"><code><span class="token punctuation">{</span>item<span class="token punctuation">,</span> <span class="token operator">:</span><span class="token property">new</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token property">close</span><span class="token operator">#</span><span class="token punctuation">,</span> index<span class="token operator">#</span><span class="token operator">:</span> getter<span class="token punctuation">}</span> <span class="token operator">=</span> tb
 <span class="token function">print</span> item<span class="token punctuation">,</span> new<span class="token punctuation">,</span> close<span class="token punctuation">,</span> getter
 </code></pre></div><div data-v-9e7c3d56><button class="button" data-v-9e7c3d56>Compile</button> <div style="display: none;" data-v-9e7c3d56><pre data-v-9e7c3d56>{item, :new, :close#, index#: getter} = tb
@@ -834,11 +834,13 @@ catch err
   that has a line break in it.&quot;</span>
 
 <span class="token comment">-- You can mix expressions into string literals using #{} syntax.</span>
+<span class="token comment">-- String interpolation is only available in double quoted strings.</span>
 <span class="token function">print</span> <span class="token string">&quot;I am <span class="token interpolation"><span class="token interpolation-punctuation punctuation">#{</span><span class="token moonscript"><span class="token function">math<span class="token punctuation">.</span>random</span><span class="token operator">!</span> <span class="token operator">*</span> <span class="token number">100</span></span><span class="token interpolation-punctuation punctuation">}</span></span>% sure.&quot;</span>
 </code></pre></div><div data-v-9e7c3d56><button class="button" data-v-9e7c3d56>Compile</button> <div style="display: none;" data-v-9e7c3d56><pre data-v-9e7c3d56>some_string = &quot;Here is a string
   that has a line break in it.&quot;
 
 -- You can mix expressions into string literals using #{} syntax.
+-- String interpolation is only available in double quoted strings.
 print &quot;I am #{math.random! * 100}% sure.&quot;
 </pre></div></div> <h2 id="function-literals"><a href="#function-literals" class="header-anchor">#</a> Function Literals</h2> <p>All functions are created using a function expression. A simple function is denoted using the arrow: <strong>-&gt;</strong>.</p> <div class="language-moonscript extra-class"><pre class="language-moonscript"><code>my_function <span class="token operator">=</span> <span class="token operator">-&gt;</span>
 my_function<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">-- call the empty function</span>
@@ -1622,6 +1624,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p> <!----></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.db476e07.js" defer></script><script src="/assets/js/3.449ab6a0.js" defer></script><script src="/assets/js/4.bb17ff94.js" defer></script><script src="/assets/js/14.5271b959.js" defer></script><script src="/assets/js/7.92ba2aee.js" defer></script><script src="/assets/js/5.80c9f8fe.js" defer></script>
+    <script src="/assets/js/app.579e3a65.js" defer></script><script src="/assets/js/3.449ab6a0.js" defer></script><script src="/assets/js/4.bb17ff94.js" defer></script><script src="/assets/js/14.cc619e35.js" defer></script><script src="/assets/js/7.92ba2aee.js" defer></script><script src="/assets/js/5.80c9f8fe.js" defer></script>
   </body>
 </html>
