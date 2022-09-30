@@ -41,8 +41,8 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="1200">
     
-    <link rel="preload" href="/assets/css/0.styles.5dad03c1.css" as="style"><link rel="preload" href="/assets/js/app.495709b8.js" as="script"><link rel="preload" href="/assets/js/3.1c8ddc94.js" as="script"><link rel="preload" href="/assets/js/13.c4182312.js" as="script"><link rel="preload" href="/assets/js/6.3f09266f.js" as="script"><link rel="preload" href="/assets/js/4.a2e47b78.js" as="script"><link rel="prefetch" href="/assets/js/1.15a41ae3.js"><link rel="prefetch" href="/assets/js/10.97a52c02.js"><link rel="prefetch" href="/assets/js/11.74b5afa5.js"><link rel="prefetch" href="/assets/js/12.9e812b54.js"><link rel="prefetch" href="/assets/js/14.5d962597.js"><link rel="prefetch" href="/assets/js/5.039248da.js"><link rel="prefetch" href="/assets/js/7.77e55f0d.js"><link rel="prefetch" href="/assets/js/8.8da7f98c.js"><link rel="prefetch" href="/assets/js/9.71ed6943.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.5dad03c1.css">
+    <link rel="preload" href="/assets/css/0.styles.02334327.css" as="style"><link rel="preload" href="/assets/js/app.7ec4f31e.js" as="script"><link rel="preload" href="/assets/js/3.1c8ddc94.js" as="script"><link rel="preload" href="/assets/js/13.1e44e297.js" as="script"><link rel="preload" href="/assets/js/6.3f09266f.js" as="script"><link rel="preload" href="/assets/js/4.a2e47b78.js" as="script"><link rel="prefetch" href="/assets/js/1.15a41ae3.js"><link rel="prefetch" href="/assets/js/10.97a52c02.js"><link rel="prefetch" href="/assets/js/11.74b5afa5.js"><link rel="prefetch" href="/assets/js/12.9ff70c59.js"><link rel="prefetch" href="/assets/js/14.70f17b36.js"><link rel="prefetch" href="/assets/js/5.039248da.js"><link rel="prefetch" href="/assets/js/7.77130700.js"><link rel="prefetch" href="/assets/js/8.8f7e9c51.js"><link rel="prefetch" href="/assets/js/9.147e1953.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.02334327.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Yuescript</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/doc/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
@@ -138,23 +138,30 @@ f!
 ]]</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
   implicit_return_root <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
   reserve_line_number <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
-  lint_global <span class="token operator">=</span> <span class="token keyword">true</span>
+  lint_global <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
+  space_over_tab <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">,</span>
+  target <span class="token operator">=</span> <span class="token string">&quot;5.4&quot;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div><h3 id="yuescript-tool"><a href="#yuescript-tool" class="header-anchor">#</a> Yuescript Tool</h3> <p> Use Yuescript tool with:</p> <div class="language- extra-class"><pre class="language-text"><code>&gt; yue -h
 Usage: yue [options|files|directories] ...
 
    -h       Print this message
    -e str   Execute a file or raw codes
+   -m       Generate minified codes
    -t path  Specify where to place compiled files
    -o file  Write output to file
    -s       Use spaces in generated codes instead of tabs
-   -m       Generate minified codes
    -p       Write output to standard out
    -b       Dump compile time (doesn't write output)
+   -g       Dump global variables used in NAME LINE COLUMN
    -l       Write line numbers from source codes
    -v       Print version
    --       Read from standard in, print to standard out
             (Must be first and only argument)
+
+   --target=version  Specify the Lua version codes the compiler will generate
+                     (version can only be 5.1, 5.2, 5.3 or 5.4)
+   --path=path_str   Append an extra Lua search path string to package.path
 
    Execute without options to enter REPL, type symbol '$'
    in a single line to start/stop multi-line mode
@@ -1728,6 +1735,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p> <!----></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.495709b8.js" defer></script><script src="/assets/js/3.1c8ddc94.js" defer></script><script src="/assets/js/13.c4182312.js" defer></script><script src="/assets/js/6.3f09266f.js" defer></script><script src="/assets/js/4.a2e47b78.js" defer></script>
+    <script src="/assets/js/app.7ec4f31e.js" defer></script><script src="/assets/js/3.1c8ddc94.js" defer></script><script src="/assets/js/13.1e44e297.js" defer></script><script src="/assets/js/6.3f09266f.js" defer></script><script src="/assets/js/4.a2e47b78.js" defer></script>
   </body>
 </html>
